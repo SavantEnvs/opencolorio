@@ -1,0 +1,9 @@
+project: savantenvs/opencolorio
+target: fuzz_ocioz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ocioz/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ocioz
+    libfuzzer: true
+    timeout: 5
